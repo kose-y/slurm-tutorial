@@ -8,7 +8,8 @@ Illustrates how to use slurm (mostly on R).
     * NOTE: exponential distribution here is parametrized so that E(X) = \theta for X ~ exp(\theta). 
 * `0_local.R` contains the code to take 10,000 samples from each of theta in 1:200. It takes around 20 seconds on single core using `lapply()`.
 * `0_job_script.sh` contains the script that submits the computation to slurm.
-    * `sbatch 0_job_script.sh` on the terminal to submit.
+    * Enter `sbatch 0_job_script.sh` to the terminal to submit.
+    * Enter `squeue` to the terminal to check job status.
 
 ## 1. Parallelization using `mclapply()`
 * `1_mclapply.R` parallelizes the previous job using the package `parallel`. The code uses four cores. This is for single-node only.
