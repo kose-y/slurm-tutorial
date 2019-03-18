@@ -11,8 +11,8 @@ samples = 10000
 # each row of it corresponds to a set of arguments to the function. 
 params = data.frame(theta=1:chains, samples=rep(samples, chains))
 
-n_jobs = 8
-cores_per_job = 10 # number of cores you wish to use per job.
+n_jobs = 4
+cores_per_job = 8 # number of cores you wish to use per job.
 sjob <- slurm_apply(MH.MCMC.exp, 
                     params, nodes=n_jobs, cpus_per_node = cores_per_job,
                     add_objects=c("exp.d", "MH.MCMC"),
@@ -32,7 +32,7 @@ sjob <- slurm_apply(MH.MCMC.exp,
 
 # However, that is NOT the case on our department cluster: 
 # many of the users don't require or utilize all the cores on a machine.
-# We are allocating eight 10-core jobs, depending on availability. 
+# We are allocating four 8-core jobs, depending on availability. 
 
 
 print_job_status(sjob) # checks if the job is completed.

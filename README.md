@@ -15,7 +15,7 @@ Illustrates how to use slurm (mostly on R).
     * Enter `squeue` to the terminal to check job status.
 
 ## 2. Using `rslurm`
-* `2_rslurm.R` parallelizes the previous job using the package `rslurm`. The package automatically submits the workload to the job scheduler. Configured to run 8 jobs, each job utilizing 10 cores. The jobs may run on several different nodes, depending on availability.
+* `2_rslurm.R` parallelizes the previous job using the package `rslurm`. The package automatically submits the workload to the job scheduler. Configured to run 4 jobs, each job utilizing 8 cores. The jobs may run on several different nodes, depending on availability.
 
 ## 3. GPU example.
 * `3_tensorflow_gpu.py`: a tensorflow tutorial code for MNIST data for classification of handwritten digits.
