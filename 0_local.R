@@ -1,5 +1,8 @@
 # local code. single core.
 source('0_sampler.R')
+# MH.MCMC.exp(theta, samples=100, startval=theta, sd=theta):
+# takes `samples` MCMC samples from exp(`theta`). 
+# `startval` and `sd` are algorithm parameters.
 chains = 200
 samples = 10000
 system.time(

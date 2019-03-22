@@ -16,13 +16,11 @@ MH.MCMC = function(target.d, samples=100, startval=1, sd=1) {
   # samples: number of samples to take
   # startval: the first sample
   # sd: standard deviation of the proposal distribution
-  
   x = rep(0, samples)
   x[1] = startval
   for (i in 2:samples) { 
-    # This is hard to vectorize, 
-    # as an iteration depends on the previous one. 
-    # This can be accelerated using e.g. RCpp. 
+    # an iteration depends on the previous one: hard to vectorize.
+    # can be accelerated using e.g. RCpp. 
     current = x[i-1]
     proposed = rnorm(1, mean=current, sd=sd)
     A = target.d(proposed)/target.d(current)
