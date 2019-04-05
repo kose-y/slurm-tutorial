@@ -1,5 +1,5 @@
 # slurm-tutorial
-Tutorial code for slurm and rslurm. Written for First-year Graduate Seminar, Mar 22, 2019.
+Tutorial code for slurm and rslurm. Written for First-year Graduate Seminar (Dept. of Statistics, SNU).
 
 Illustrates how to use slurm (mostly on R).
 
