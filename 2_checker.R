@@ -1,4 +1,4 @@
-print_job_status(sjob) # checks if the job is completed.
+get_job_status(sjob) # checks if the job is completed.
 
 # To see information of the jobs on slurm, type e.g., 
 # sacct -j <job number> -o jobid,submit,start,end,nodelist,state
