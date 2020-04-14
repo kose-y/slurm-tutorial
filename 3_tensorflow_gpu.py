@@ -1,7 +1,7 @@
 import tensorflow as tf
 # The code is based on https://www.tensorflow.org/tutorials.
 print(tf.__version__) # this is a pretty old version of TF. 
-# you might want to install newer version on your own
+# you might want to install newer version on your own with anaconda (https://www.anaconda.com/)
 # or request it to Mr. Choi. 
 mnist = tf.keras.datasets.mnist
 
